@@ -1,0 +1,20 @@
+@import './_commonvars.scss';
+@import './_mixins.scss';
+
+$pippoMio:blue;
+
+h1{
+    color:$pippoMio;
+}
+
+body{
+    background-image:url('/images/bg.jpg');
+}
+
+.header, .footer{
+    background-color:$black;
+}
+
+.container{
+    padding-top: 50px;
+}
