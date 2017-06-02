@@ -1,0 +1,133 @@
+<!--<toaster-container></toaster-container>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"><img class="logo-top-left" src="/images/logo.png" alt=""></a>
+        </div>
+
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a [routerLink]="['/home']"> <img src="/images/home_64x64.png" class="reducto" alt=""> </a>
+                </li>
+                <li style="color:white" *ngIf="isAuthenticated">
+                    <p *ngIf="isAdmin">Administrator</p>
+                    <p *ngIf="!isAdmin">User</p>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav" *ngIf="isAuthenticated">
+                <li *ngIf="isAdmin">
+                    <a [routerLink]="['/tournament']"><span style="color:white">Gestione Torneo</span></a>
+                </li>
+                <li>
+                    <a [routerLink]="['/ranking']"><span style="color:white">Classifiche</span></a>
+                </li>
+                <li>
+                    <a [routerLink]="['/permanent']"><span style="color:white">Torneo Permanente</span></a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li *ngIf="!isAuthenticated"><a [routerLink]="['/login']"> Login</a></li>
+                <li class="dropdown" *ngIf="isAuthenticated">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ utente }}<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li *ngIf="isAuthenticated"><a class="glyphicon glyphicon-cog manina" aria-hidden="true"> Profilo</a></li>
+                        <li *ngIf="isAuthenticated"> <a class="glyphicon glyphicon-log-out manina" aria-hidden="true" (click)="onLogout()"> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="nav navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+            <div class="navbar-text pull=left">
+                <p style="color:white">© 2017 - Max Bertoli - info@maxbertoli.it</p>
+            </div>
+        </div>
+    </div>
+
+</nav>
+
+<div style="margin-top: 60px; margin-bottom:70px; margin-left:20px;">
+    <router-outlet></router-outlet>
+</div>-->
+
+
+<toaster-container></toaster-container>
+<nav class="header">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"><img class="logo-top-left" src="/images/logo.png" alt=""></a>
+        </div>
+
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a *ngIf="isAuthenticated" [routerLink]="['/home']"> <img src="/images/home_64x64.png" class="reducto" alt=""> </a>
+                </li>
+                <li style="color:white" *ngIf="isAuthenticated">
+                    <!--<p *ngIf="isAdmin == undefined">Nessuno</p>-->
+                    <p *ngIf="isAdmin">Administrator</p>
+                    <p *ngIf="!isAdmin">User</p>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav" *ngIf="isAuthenticated">
+                <li *ngIf="isAdmin">
+                    <a [routerLink]="['/tournament']"><span style="color:white">Gestione Torneo</span></a>
+                </li>
+                <li>
+                    <a [routerLink]="['/ranking']"><span style="color:white">Classifiche</span></a>
+                </li>
+                <li>
+                    <a [routerLink]="['/permanent']"><span style="color:white">Torneo Permanente</span></a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li *ngIf="!isAuthenticated"><a [routerLink]="['/login']"> Login</a></li>
+                <li class="dropdown" *ngIf="isAuthenticated">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ utente }}<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li *ngIf="isAuthenticated"><a class="glyphicon glyphicon-cog manina" aria-hidden="true"> Profilo</a></li>
+                        <li *ngIf="isAuthenticated"> <a class="glyphicon glyphicon-log-out manina" aria-hidden="true" (click)="onLogout()"> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+
+    <div class="nav navbar-default navbar-fixed-bottom footer">
+        <div class="container-fluid">
+            <div class="navbar-text pull=left">
+                <p style="color:white">© 2017 - Max Bertoli - info@maxbertoli.it</p>
+            </div>
+        </div>
+    </div>
+
+</nav>
+
+<div class="container">
+</div>
